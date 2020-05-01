@@ -1,6 +1,6 @@
 FROM node:12-alpine
 
-RUN yarn global add expo-cli@3.18.2 sharp-cli@1.13.1
+RUN yarn global add expo-cli@3.20.1 sharp-cli@1.13.1
 
 RUN apk add --no-cache git openssh-client
 
