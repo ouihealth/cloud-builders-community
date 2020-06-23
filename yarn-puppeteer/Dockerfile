@@ -14,6 +14,7 @@ RUN apk update && apk upgrade && \
       ca-certificates@edge \
       ttf-freefont@edge \
       git \
+      openssh-client \
       xvfb
 
 # Tell Puppeteer to skip installing Chrome. We'll be using the installed package.
