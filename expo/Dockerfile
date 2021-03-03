@@ -1,8 +1,8 @@
-FROM node:12-alpine
+FROM node:14.16.0-alpine
 
-RUN apk add --no-cache git openssh-client
+RUN apk add --no-cache git openssh-client make gcc g++ python3
 
-RUN yarn global add expo-cli@4.0.13 sharp-cli@1.13.1 --verbose --no-cache --production --ignore-optional && \
+RUN yarn global add expo-cli@4.2.1 sharp-cli@1.14.1 --verbose --no-cache --production --ignore-optional && \
       yarn cache clean
 
 ENV NODE_OPTIONS="--max-old-space-size=4096"
