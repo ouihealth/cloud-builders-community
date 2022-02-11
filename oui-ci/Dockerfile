@@ -1,4 +1,4 @@
-FROM node:14.16.0-alpine
+FROM node:16.13.1-alpine
 
 RUN apk add --no-cache git openssh-client curl make gcc g++ python3
 
@@ -8,7 +8,7 @@ RUN JQ_URL="https://circle-downloads.s3.amazonaws.com/circleci-images/cache/linu
   && chmod +x /usr/bin/jq \
   && jq --version
 
-RUN yarn global add expo-cli@5.0.3 sharp-cli@1.15.0 firebase-tools@8.16.2 lerna@3.22.1 --verbose --no-cache --production --ignore-optional && \
+RUN yarn global add expo-cli@5.0.3 https://github.com/ouihealth/sharp-cli\#c2f4543 firebase-tools@8.16.2 lerna@3.22.1 --verbose --no-cache --production --ignore-optional && \
       yarn cache clean
 
 ADD firebase.bash /usr/bin
