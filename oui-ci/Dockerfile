@@ -1,6 +1,6 @@
 FROM node:16.13.1-alpine
 
-RUN apk add --no-cache git openssh-client curl make gcc g++ python3
+RUN apk add --no-cache git openssh-client curl make gcc g++ python3 libc6-compat
 
 # install jq
 RUN JQ_URL="https://circle-downloads.s3.amazonaws.com/circleci-images/cache/linux-amd64/jq-latest" \
