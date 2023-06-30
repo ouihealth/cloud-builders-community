@@ -1,4 +1,4 @@
-FROM node:16.13.1-alpine
+FROM node:18.16.0-alpine
 
 RUN apk add --no-cache git openssh-client curl make gcc g++ python3 libc6-compat
 
