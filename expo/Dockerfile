@@ -1,4 +1,4 @@
-FROM node:18.16.0-alpine
+FROM node:18.18.2-alpine
 
 RUN apk add --no-cache git openssh-client make gcc g++ python3
 
