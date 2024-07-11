@@ -7,18 +7,18 @@ steps:
 - name: 'gcr.io/cloud-builders/docker'
   args:
   - 'build'
-  - '--build-arg=NODE_VERSION=18.18.2'
-  - '--tag=gcr.io/$PROJECT_ID/yarn-puppeteer:node-18.18.2'
-  # 18.18.2 is tagged :latest
+  - '--build-arg=NODE_VERSION=20.15.1'
+  - '--tag=gcr.io/$PROJECT_ID/yarn-puppeteer:node-20.15.1'
+  # 20.15.1 is tagged :latest
   - '--tag=gcr.io/$PROJECT_ID/yarn-puppeteer:latest'
   - '--tag=gcr.io/$PROJECT_ID/nodejs/yarn-puppeteer'
   - '.'
 # Print for each version
-- name: 'gcr.io/$PROJECT_ID/yarn-puppeteer:node-18.18.2'
+- name: 'gcr.io/$PROJECT_ID/yarn-puppeteer:node-20.15.1'
   args: ['--version']
 
 images:
 - 'gcr.io/$PROJECT_ID/yarn-puppeteer:latest'
-- 'gcr.io/$PROJECT_ID/yarn-puppeteer:node-18.18.2'
+- 'gcr.io/$PROJECT_ID/yarn-puppeteer:node-20.15.1'
 - 'gcr.io/$PROJECT_ID/nodejs/yarn-puppeteer'
 tags: ['cloud-builders-community']

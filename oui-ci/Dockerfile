@@ -1,4 +1,4 @@
-FROM node:18.18.2-alpine
+FROM node:20.15.1-alpine
 
 RUN apk add --no-cache git openssh-client curl make gcc g++ python3 libc6-compat \
       # https://github.com/CircleCI-Public/gcp-cli-orb/issues/21#issuecomment-709539907
